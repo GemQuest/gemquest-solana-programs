@@ -102,7 +102,7 @@ async function mintGemsToUser(amount: number) {
     })
     .instruction();
 
-  const { blockhash } = await program.provider.connection.getRecentBlockhash(
+  const { blockhash } = await program.provider.connection.getLatestBlockhash(
     "confirmed"
   );
 
